@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>博客2 | 与己同行</title>
+  <title>用hexo搭建一个博客系统 | 与己同行</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -172,29 +172,39 @@
         <div class="row col-md-offset-2">
             <div class="col-md-8">
     			<span class="post-meta">
-      <time datetime="2017-11-19T01:12:58.000Z" itemprop="datePublished">
+      <time datetime="2017-11-19T03:15:18.000Z" itemprop="datePublished">
           2017-11-19
       </time>
     
 </span>
-                <h1>博客2</h1>
+                <h1>用hexo搭建一个博客系统</h1>
             </div>
         </div>
         <div class="col-md-8 col-md-offset-2">
-      		<p>前端</p>
+      		<p>安装hexo ，电脑上必须已经安装过Node.js和Git。<br>如果没有安装，可以找官网下载，安装即可。<br>只需要几分钟， 你就可以轻松的搭建好自己freestyle的博客。<br>步骤：</p>
+<p>#####0. 打开gitbash, cd进入一个安全的目录。</p>
+<p>#####1. 新建repo<br> 首先你得有自己的github账号。登录github， 点击右上角+ ，可以new 一个repo。</p>
+<blockquote>
+<p>注意：repo的名字是 [你的 github用户名].github.io</p>
+<p>#####2. 安装hexo<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm  install -g hexo-cli ,这一步安装hexo</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<p>#####3. hexo创建博客<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">hexo init myBlog</span><br><span class="line">cd myBlog</span><br><span class="line">npm i</span><br><span class="line">hexo new 博客</span><br><span class="line">start 博客.md</span><br><span class="line">```      </span><br><span class="line">.md文件就是你要编辑在博客上显示的内容</span><br><span class="line"></span><br><span class="line">打开配置文件</span><br></pre></td></tr></table></figure></p>
+<p>start  _config.yml<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"> ,主要是设置网站的配置，比如：标题、作者。。。。</span><br><span class="line">&gt;修改第六行的title,是网站的名字</span><br><span class="line">       第九行的author，修改成你的姓名</span><br><span class="line">       最后一行的type, 给成type: git</span><br><span class="line">       新增一行 repo:(空一格)就是第1步中新建的repo 的仓库地址。</span><br></pre></td></tr></table></figure></p>
+<p>npm install hexo-deployer-git –save,安装git部署插件<br>hexo deploy<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">打开github,打开新repo的Github Pages，点击链接预览，你将看到一个好看的博客</span><br><span class="line"></span><br><span class="line">#####4. 主题切换</span><br><span class="line">如果你不喜欢博客的展现风格[https://github.com/hexojs/hexo/wiki/Themes](https://github.com/hexojs/hexo/wiki/Themes)中还有很多不同主题风格，你可以找一个喜欢的。</span><br><span class="line"></span><br><span class="line">打开连接，进入主题的github， 复制主题的HTTP或者 SSH仓库地址，</span><br></pre></td></tr></table></figure></p>
+<p>cd theme,<br>git clone 仓库地址，<br>cd ..<br>start  _config.yml<br>找到theme,在75行，改成当前主题的主题名<br>hexo generate<br>hexo deploy<br>等执行完成，再打开github， 刷新博客页面，博客换了一种风格。。<br>```</p>
+<p>#####5.上传源代码<br>你的博客页就是显示你的博客内容，不能保存你生成博客的代码。而现在我们自己创建一个新仓库， 来存放代码，以防以后丢失目录。<br>创建一个新repo为blog-generator。创建后按照github上的创建提示先输入命令行即可。</p>
+<blockquote>
+<p>以后每次 hexo deploy 完之后，博客就会更新；<br>然后你还要 add / commit /push 一下「生成博客的程序代码」，以防万一<br>这个 blog-generator 就是用来生成博客的程序，而「你的用户名.github.io」仓库就是你的博客页面。</p>
+</blockquote>
 
             <div class="clearfix"></div>
             <hr class="nogutter">
         </div>
         <nav class="pagination" role="pagination">
     
-    <a class="pull-left" href="/2017/11/19/用hexo搭建一个博客系统/" style="float: left;">
-        ← 用hexo搭建一个博客系统
-    </a>
     
-    
-    <a class="pull-right" href="/2017/11/19/开博大吉/">
-        开博大吉 →
+    <a class="pull-right" href="/2017/11/19/博客2/">
+        博客2 →
     </a>
     
 </nav>
